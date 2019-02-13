@@ -5,6 +5,8 @@ import toArrayOfNodes from "./helpers/toArrayOfNodes";
 
 export default class TypeIt {
   constructor(element, options) {
+    // 一个TypeIt实例下对应多个Instance
+    // 每个instance对应查询到的一个NodeList
     this.instances = toArrayOfNodes(element).map(el => {
       return new Instance({
         element: el,
