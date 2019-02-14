@@ -31,6 +31,8 @@ export function appendStyleBlock(styles, id = "") {
 }
 
 export function generateHash() {
+  // Math.random() 产生两个相同的随机数的概率非常非常小 所以这里用他来产生hash值没什么问题
+  // TODO: 需要深入一下Math.random()
   return Math.random()
     .toString(36)
     .substring(2, 15);
